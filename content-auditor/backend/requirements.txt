@@ -1,47 +1,51 @@
-# Web framework
+# ── Web Framework ──────────────────────────────────────────
 fastapi==0.115.0
 uvicorn[standard]==0.30.6
 python-multipart==0.0.12
 
-# Database
+# ── Database ───────────────────────────────────────────────
 sqlalchemy[asyncio]==2.0.35
 asyncpg==0.29.0
 alembic==1.13.3
 pgvector==0.3.3
 
-# Task queue
+# ── Task Queue ─────────────────────────────────────────────
 celery[redis]==5.4.0
 redis==5.1.1
 
-# Scraping
+# ── Scraping ───────────────────────────────────────────────
 playwright==1.47.0
 beautifulsoup4==4.12.3
 trafilatura==1.12.0
 langdetect==1.0.9
 tenacity==9.0.0
 
-# AI / Embeddings
+# ── Embeddings CPU-only (sin CUDA — mucho más liviano) ─────
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.4.0+cpu
 sentence-transformers==3.1.1
+
+# ── AI / Classification ────────────────────────────────────
 openai==1.51.0
 
-# Auth / Security
+# ── Auth ───────────────────────────────────────────────────
 python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4
 slowapi==0.1.9
 
-# Validation
+# ── Config / Validation ────────────────────────────────────
 pydantic==2.9.2
 pydantic-settings==2.5.2
 
-# Reports
+# ── Reports ────────────────────────────────────────────────
 jinja2==3.1.4
 weasyprint==62.3
 
-# Observability
+# ── Observability ──────────────────────────────────────────
 structlog==24.4.0
 prometheus-fastapi-instrumentator==7.0.0
 
-# Dev
+# ── Dev / Testing ──────────────────────────────────────────
 ruff==0.6.9
 mypy==1.11.2
 pytest==8.3.3
